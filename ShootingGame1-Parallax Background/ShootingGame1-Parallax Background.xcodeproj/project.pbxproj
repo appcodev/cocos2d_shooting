@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3764EB3916CACC140018862D /* beep4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3764EB3816CACC140018862D /* beep4.caf */; };
 		379C4A7916C97E49004BCD67 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C4A7816C97E49004BCD67 /* QuartzCore.framework */; };
 		379C4A7B16C97E49004BCD67 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C4A7A16C97E49004BCD67 /* OpenGLES.framework */; };
 		379C4A7D16C97E49004BCD67 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379C4A7C16C97E49004BCD67 /* OpenAL.framework */; };
@@ -151,6 +152,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3764EB3816CACC140018862D /* beep4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep4.caf; sourceTree = "<group>"; };
 		379C4A7416C97E49004BCD67 /* ShootingGame1-Parallax Background.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShootingGame1-Parallax Background.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		379C4A7816C97E49004BCD67 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		379C4A7A16C97E49004BCD67 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -882,6 +884,7 @@
 		379C4C1C16C97FAF004BCD67 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				3764EB3816CACC140018862D /* beep4.caf */,
 				379C4C1D16C97FAF004BCD67 /* explode.caf */,
 				379C4C1E16C97FAF004BCD67 /* fly.caf */,
 				379C4C1F16C97FAF004BCD67 /* gun.caf */,
@@ -978,6 +981,7 @@
 				379C4C5216C9A5AD004BCD67 /* space2_default-ipadhd.png in Resources */,
 				379C4C5316C9A5AD004BCD67 /* space2_default.plist in Resources */,
 				379C4C5416C9A5AD004BCD67 /* space2_default.png in Resources */,
+				3764EB3916CACC140018862D /* beep4.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,6 +1208,7 @@
 				379C4C0F16C97E4C004BCD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

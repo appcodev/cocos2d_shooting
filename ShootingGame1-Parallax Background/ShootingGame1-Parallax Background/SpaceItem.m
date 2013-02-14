@@ -7,7 +7,7 @@
 //
 
 #import "SpaceItem.h"
-
+#import "SoundManager.h"
 
 
 @implementation SpaceItem
@@ -49,7 +49,7 @@
     else if(type==SpaceItemCoin){
         return [self initCoinItemAtPosition:location];
     }else{
-        NSLog(@"type %d",type);
+        //NSLog(@"type %d",type);
         NSString *sName = @"item7.png";
         if(type==SpaceItemPower){
             sName = @"item10.png";
@@ -79,6 +79,21 @@
 -(void)itemMoveOutBound:(CCSprite*)sender{
     [sender stopAllActions];
     [sender removeFromParentAndCleanup:YES];
+}
+
+-(void)consumedAct{
+    //[SoundManager playSound:SOUND_BEEP];
+    
+    CCJumpTo *jump = [CCJumpTo actionWithDuration:0.5 position:ccp(self.position.x, self.position.y) height:25 jumps:1];
+    CCSequence *sq = [CCSequence actions:jump,[CCCallFuncN actionWithTarget:self selector:@selector(jumpFinished:)], nil];
+    
+    [self runAction:sq];
+}
+
+-(void)jumpFinished:(SpaceItem*)item{
+    [_delegate itemJumpFinished:self];
+    
+    [item removeFromParentAndCleanup:YES];
 }
 
 

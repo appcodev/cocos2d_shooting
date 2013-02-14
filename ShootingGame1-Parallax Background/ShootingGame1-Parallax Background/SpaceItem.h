@@ -19,10 +19,23 @@ enum SpaceItemType {
 
 typedef int SpaceItemType;
 
+@class SpaceItem;
+
+@protocol SpaceItemDelegate <NSObject>
+
+-(void)itemJumpFinished:(SpaceItem*)item;
+
+@end
+
 @interface SpaceItem : CCSprite {
     
 }
 
+@property (nonatomic,strong) id<SpaceItemDelegate> delegate;
+
 -(id)initItemAtPosition:(CGPoint)location type:(SpaceItemType)type;
+
+//action
+-(void)consumedAct;
 
 @end

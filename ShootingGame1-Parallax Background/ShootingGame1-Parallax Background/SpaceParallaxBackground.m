@@ -20,17 +20,17 @@
     
     if(self = [super init]){
         
-        NSArray *bgLvName = @[/*@"map_l1_bg.png",*/@"map_l2_bg.png",@"map_l3_bg.png"];
+        NSArray *bgLvName = @[@"map_l1_bg.png",@"map_l2_bg.png",@"map_l3_bg.png"];
         
         //background lv 0
         CCSprite *bg0_1 = [CCSprite spriteWithFile:@"map_bg.jpg"];
         [bg0_1 setAnchorPoint:CGPointZero];
-        [bg0_1 setTag:-1];
-//        CCSprite *bg0_2 = [CCSprite spriteWithFile:@"map_bg.jpg"];
-//        [bg0_2 setAnchorPoint:CGPointZero];
-//        [bg0_2 setTag:1];
+        [bg0_1 setTag:0];
+        CCSprite *bg0_2 = [CCSprite spriteWithFile:@"map_bg.jpg"];
+        [bg0_2 setAnchorPoint:CGPointZero];
+        [bg0_2 setTag:1];
         [self addChild:bg0_1 z:-1 parallaxRatio:ccp(0.5, 0.5) positionOffset:ccp(0, 0)];
-//        [self addChild:bg0_2 z:-1 parallaxRatio:ccp(0.5, 0.5) positionOffset:ccp(bg0_1.boundingBox.size.width, 0)];
+        [self addChild:bg0_2 z:-1 parallaxRatio:ccp(0.5, 0.5) positionOffset:ccp(bg0_1.boundingBox.size.width, 0)];
         
         
         //add front layer
